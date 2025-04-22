@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProDevStudio - VPS Plans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #1a1a1a;
+      --accent-color: #00b4ff;
+      --text-color: #f2f2f2;
+      --shadow-light: rgba(255, 255, 255, 0.05);
+      --shadow-dark: rgba(0, 0, 0, 0.3);
+      --glow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 40px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: var(--accent-color);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .vps-plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .plan {
+      background: #2a2a2a;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--glow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .plan:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--accent-color), 0 0 40px var(--accent-color);
+    }
+    .plan h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: var(--accent-color);
+    }
+    .plan p {
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+    .price {
+      font-size: 1.2em;
+      color: var(--text-color);
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .back-home {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      padding: 12px 24px;
+      color: var(--text-color);
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      box-shadow: var(--glow);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .back-home:hover {
+      background-color: #121212;
+      box-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <h1>VPS Hosting Plans</h1>
+  <section class="vps-plans">
+    <div class="plan">
+      <h2>Basic Plan</h2>
+      <p>1 vCPU<br>1GB RAM<br>25GB SSD Storage<br>1TB Bandwidth</p>
+      <div class="price">$5/mo</div>
+    </div>
+    <div class="plan">
+      <h2>Pro Plan</h2>
+      <p>2 vCPU<br>4GB RAM<br>80GB SSD Storage<br>3TB Bandwidth</p>
+      <div class="price">$15/mo</div>
+    </div>
+    <div class="plan">
+      <h2>Elite Plan</h2>
+      <p>4 vCPU<br>8GB RAM<br>160GB SSD Storage<br>5TB Bandwidth</p>
+      <div class="price">$30/mo</div>
+    </div>
+  </section>
+
+   <div style="text-align: center;">
+    <a href="index.html" class="back-home">
+      <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      Home
+    </a>
+  </div>
+</body>
+</html>
