@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProDevStudio - Widgets</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #1a1a1a;
+      --accent-color: #00b4ff;
+      --text-color: #f2f2f2;
+      --glow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 40px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: var(--accent-color);
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .widgets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .widget {
+      background: #2a2a2a;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--glow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .widget:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px var(--accent-color), 0 0 40px var(--accent-color);
+    }
+    .widget h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3em;
+      color: var(--accent-color);
+      margin-bottom: 10px;
+    }
+    .widget p {
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      padding: 12px 24px;
+      color: var(--text-color);
+      background-color: #2a2a2a;
+      border-radius: 8px;
+      box-shadow: var(--glow);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .back-home:hover {
+      background-color: #121212;
+      box-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--accent-color);
+    }
+    .back-home svg {
+      margin-right: 8px;
+      fill: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <h1>Custom Widgets</h1>
+  <section class="widgets-grid">
+    <div class="widget">
+      <h2>Weather Widget</h2>
+      <p>Displays current weather and forecasts using real-time APIs. Ideal for dashboards.</p>
+    </div>
+    <div class="widget">
+      <h2>Analytics Tracker</h2>
+      <p>Track user sessions, clicks, and traffic visually with charts and graphs.</p>
+    </div>
+    <div class="widget">
+      <h2>Crypto Ticker</h2>
+      <p>Live price updates for popular cryptocurrencies. Customizable with themes.</p>
+    </div>
+    <div class="widget">
+      <h2>To-do Manager</h2>
+      <p>A minimal and clean task manager widget to keep track of your workflow.</p>
+    </div>
+    <div class="widget">
+      <h2>Live Chat Embed</h2>
+      <p>Drop-in customer chat box to engage users and respond instantly.</p>
+    </div>
+    <div class="widget">
+      <h2>Calendar Viewer</h2>
+      <p>Sync with Google Calendar or iCal to view upcoming meetings and events.</p>
+    </div>
+  </section>
+
+  <div style="text-align: center;">
+    <a href="index.html" class="back-home">
+      <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      Home
+    </a>
+  </div>
+</body>
+</html>
